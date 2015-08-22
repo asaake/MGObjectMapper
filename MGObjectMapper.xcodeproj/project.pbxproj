@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B7D4BC2C6C0A5E99AD2E4DD /* libPods-MGObjectMapperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B4AACBF810ADACC751DDCA /* libPods-MGObjectMapperTests.a */; };
+		684DB0465B229737C8C17300 /* Pods-MGObjectMapperTests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 684DB28887C3405CD6BC7500 /* Pods-MGObjectMapperTests.release.xcconfig */; };
+		684DB04F3528AE11FE70BC61 /* MGURLTransformerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DB1971D85655600115155 /* MGURLTransformerTest.m */; };
+		684DB26D33B75577AB787FE6 /* MGDateTransformerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DB930126B356E8900183D /* MGDateTransformerTest.m */; };
+		684DB4924DCAB309C195B082 /* MGObjectMapperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DB67F43AB16992174FDB2 /* MGObjectMapperTest.m */; };
+		684DB6A77010E7976CDA964A /* MGURLTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DB1BB49B92A256CE211AA /* MGURLTransformer.m */; };
+		684DB8BFEDE077A64FA1F8FD /* MGDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DBB4C943530809B1753B6 /* MGDateTransformer.m */; };
+		684DBB44800A4FAB24F5FECE /* Pods-MGObjectMapperTests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 684DBA33A20184D506EF2D58 /* Pods-MGObjectMapperTests.debug.xcconfig */; };
+		684DBC42E205B6AA2AA30064 /* libMGObjectMapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 684DB6F849F6CCECCAAA3426 /* libMGObjectMapper.a */; };
+		684DBD24F4725E8A7C92F484 /* MGObjectTransformerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DB6278E4FC20B9847C455 /* MGObjectTransformerTest.m */; };
+		684DBDA9E2B232495FCE1047 /* MGObjectTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DBC177B1CA647075E2002 /* MGObjectTransformer.m */; };
+		684DBF0A330A13DECD27C67E /* MGObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 684DB390A5ECD66DE7F72B7B /* MGObjectMapper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		684DB0199A78B55A69630446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 684DB0BDFD138E61C0954029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 684DB6C2647A72305317C4D9;
+			remoteInfo = JSONObjectMapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		684DB6AA703914B8A885E9F2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		27B4AACBF810ADACC751DDCA /* libPods-MGObjectMapperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MGObjectMapperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		684DB1971D85655600115155 /* MGURLTransformerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGURLTransformerTest.m; sourceTree = "<group>"; };
+		684DB1BB49B92A256CE211AA /* MGURLTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGURLTransformer.m; sourceTree = "<group>"; };
+		684DB28887C3405CD6BC7500 /* Pods-MGObjectMapperTests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-MGObjectMapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGObjectMapperTests/Pods-MGObjectMapperTests.release.xcconfig"; sourceTree = "<group>"; };
+		684DB390A5ECD66DE7F72B7B /* MGObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGObjectMapper.m; sourceTree = "<group>"; };
+		684DB54C9E84F5B8350F0338 /* MGDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDateTransformer.h; sourceTree = "<group>"; };
+		684DB556BA9433C482E59485 /* MGObjectMapperResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGObjectMapperResource.h; sourceTree = "<group>"; };
+		684DB6278E4FC20B9847C455 /* MGObjectTransformerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGObjectTransformerTest.m; sourceTree = "<group>"; };
+		684DB67F43AB16992174FDB2 /* MGObjectMapperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGObjectMapperTest.m; sourceTree = "<group>"; };
+		684DB6F284BFC2C644053065 /* MGObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGObjectMapper.h; sourceTree = "<group>"; };
+		684DB6F849F6CCECCAAA3426 /* libMGObjectMapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGObjectMapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		684DB71DA7A74365CCDF272B /* MGObjectMapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGObjectMapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		684DB7A1EB95630D2053CFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		684DB8CA469C04CD6D03CF19 /* MGObjectTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGObjectTransformer.h; sourceTree = "<group>"; };
+		684DB930126B356E8900183D /* MGDateTransformerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDateTransformerTest.m; sourceTree = "<group>"; };
+		684DBA33A20184D506EF2D58 /* Pods-MGObjectMapperTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-MGObjectMapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGObjectMapperTests/Pods-MGObjectMapperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		684DBB4C943530809B1753B6 /* MGDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDateTransformer.m; sourceTree = "<group>"; };
+		684DBBBF09A1CEE50AE7B0C2 /* MGURLTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGURLTransformer.h; sourceTree = "<group>"; };
+		684DBC177B1CA647075E2002 /* MGObjectTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGObjectTransformer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		684DB5D95516E18B590F7E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684DBC42E205B6AA2AA30064 /* libMGObjectMapper.a in Frameworks */,
+				1B7D4BC2C6C0A5E99AD2E4DD /* libPods-MGObjectMapperTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684DB8439B2945C5F8E6C471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		684DB22DFB9833A5795A99A8 /* MGObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				684DB2353201F6C75571B259 /* Classes */,
+			);
+			path = MGObjectMapper;
+			sourceTree = "<group>";
+		};
+		684DB2353201F6C75571B259 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				684DB390A5ECD66DE7F72B7B /* MGObjectMapper.m */,
+				684DB6F284BFC2C644053065 /* MGObjectMapper.h */,
+				684DB556BA9433C482E59485 /* MGObjectMapperResource.h */,
+				684DB7234DE923D1B6E2296A /* Transformers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		684DB3E494E3D77096DA526D /* MGObjectMapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				684DBFF21E37A0416A911491 /* Supporting Files */,
+				684DBF653B198062BDE92A7A /* Classes */,
+			);
+			path = MGObjectMapperTests;
+			sourceTree = "<group>";
+		};
+		684DB526B26061E122E1323C = {
+			isa = PBXGroup;
+			children = (
+				684DB6164AEABFBFE21319D8 /* Products */,
+				684DB22DFB9833A5795A99A8 /* MGObjectMapper */,
+				684DB3E494E3D77096DA526D /* MGObjectMapperTests */,
+				B33A5D60C8699FE955FBACD1 /* Pods */,
+				E039D954BE2450D32697C84A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		684DB6164AEABFBFE21319D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				684DB6F849F6CCECCAAA3426 /* libMGObjectMapper.a */,
+				684DB71DA7A74365CCDF272B /* MGObjectMapperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		684DB7234DE923D1B6E2296A /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				684DBB4C943530809B1753B6 /* MGDateTransformer.m */,
+				684DB54C9E84F5B8350F0338 /* MGDateTransformer.h */,
+				684DB1BB49B92A256CE211AA /* MGURLTransformer.m */,
+				684DBBBF09A1CEE50AE7B0C2 /* MGURLTransformer.h */,
+				684DBC177B1CA647075E2002 /* MGObjectTransformer.m */,
+				684DB8CA469C04CD6D03CF19 /* MGObjectTransformer.h */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
+		684DB99C87AB231ABB3276F7 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				684DB930126B356E8900183D /* MGDateTransformerTest.m */,
+				684DB1971D85655600115155 /* MGURLTransformerTest.m */,
+				684DB6278E4FC20B9847C455 /* MGObjectTransformerTest.m */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
+		684DBF653B198062BDE92A7A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				684DB67F43AB16992174FDB2 /* MGObjectMapperTest.m */,
+				684DB99C87AB231ABB3276F7 /* Transformers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		684DBFF21E37A0416A911491 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				684DB7A1EB95630D2053CFFC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B33A5D60C8699FE955FBACD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				684DBA33A20184D506EF2D58 /* Pods-MGObjectMapperTests.debug.xcconfig */,
+				684DB28887C3405CD6BC7500 /* Pods-MGObjectMapperTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E039D954BE2450D32697C84A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27B4AACBF810ADACC751DDCA /* libPods-MGObjectMapperTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		684DB6C2647A72305317C4D9 /* MGObjectMapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684DB1BA2CF8980BDA1E3CCA /* Build configuration list for PBXNativeTarget "MGObjectMapper" */;
+			buildPhases = (
+				684DB8DED03AAAE99332B64E /* Sources */,
+				684DB8439B2945C5F8E6C471 /* Frameworks */,
+				684DB6AA703914B8A885E9F2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MGObjectMapper;
+			productName = JSONObjectMapper;
+			productReference = 684DB6F849F6CCECCAAA3426 /* libMGObjectMapper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		684DB881A1C64280A3389892 /* MGObjectMapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684DB9A4927535486C153283 /* Build configuration list for PBXNativeTarget "MGObjectMapperTests" */;
+			buildPhases = (
+				6ABB89A2BF80D0D1DFE13DE7 /* Check Pods Manifest.lock */,
+				684DB3C36A6F92E11159E643 /* Sources */,
+				684DB5D95516E18B590F7E68 /* Frameworks */,
+				684DBD62B9845B459C825237 /* Resources */,
+				82F03B6EAC33D63902E84BFD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				684DBCACEF53DE0580DDBA71 /* PBXTargetDependency */,
+			);
+			name = MGObjectMapperTests;
+			productName = JSONObjectMapperTests;
+			productReference = 684DB71DA7A74365CCDF272B /* MGObjectMapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		684DB0BDFD138E61C0954029 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = anonymous;
+			};
+			buildConfigurationList = 684DB12E932726F47AFEFBC1 /* Build configuration list for PBXProject "MGObjectMapper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 684DB526B26061E122E1323C;
+			productRefGroup = 684DB6164AEABFBFE21319D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				684DB6C2647A72305317C4D9 /* MGObjectMapper */,
+				684DB881A1C64280A3389892 /* MGObjectMapperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		684DBD62B9845B459C825237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684DBB44800A4FAB24F5FECE /* Pods-MGObjectMapperTests.debug.xcconfig in Resources */,
+				684DB0465B229737C8C17300 /* Pods-MGObjectMapperTests.release.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6ABB89A2BF80D0D1DFE13DE7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82F03B6EAC33D63902E84BFD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MGObjectMapperTests/Pods-MGObjectMapperTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		684DB3C36A6F92E11159E643 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684DB4924DCAB309C195B082 /* MGObjectMapperTest.m in Sources */,
+				684DB26D33B75577AB787FE6 /* MGDateTransformerTest.m in Sources */,
+				684DB04F3528AE11FE70BC61 /* MGURLTransformerTest.m in Sources */,
+				684DBD24F4725E8A7C92F484 /* MGObjectTransformerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684DB8DED03AAAE99332B64E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684DBF0A330A13DECD27C67E /* MGObjectMapper.m in Sources */,
+				684DB6A77010E7976CDA964A /* MGURLTransformer.m in Sources */,
+				684DB8BFEDE077A64FA1F8FD /* MGDateTransformer.m in Sources */,
+				684DBDA9E2B232495FCE1047 /* MGObjectTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		684DBCACEF53DE0580DDBA71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 684DB6C2647A72305317C4D9 /* MGObjectMapper */;
+			targetProxy = 684DB0199A78B55A69630446 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		684DB2B1DAD3464A439BEA16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		684DB3E7C6A481CB8EC1D68B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		684DB816BA32F55F34CACAC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684DB28887C3405CD6BC7500 /* Pods-MGObjectMapperTests.release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MGObjectMapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = MGObjectMapperTests;
+			};
+			name = Release;
+		};
+		684DBC71F0BE9910B238A2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = MGObjectMapper;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		684DBDEC11EFDBF9FBDF5112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684DBA33A20184D506EF2D58 /* Pods-MGObjectMapperTests.debug.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MGObjectMapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = MGObjectMapperTests;
+			};
+			name = Debug;
+		};
+		684DBFE51FD0324DB823E0AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = MGObjectMapper;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		684DB12E932726F47AFEFBC1 /* Build configuration list for PBXProject "MGObjectMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684DB3E7C6A481CB8EC1D68B /* Debug */,
+				684DB2B1DAD3464A439BEA16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		684DB1BA2CF8980BDA1E3CCA /* Build configuration list for PBXNativeTarget "MGObjectMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684DBC71F0BE9910B238A2E5 /* Debug */,
+				684DBFE51FD0324DB823E0AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		684DB9A4927535486C153283 /* Build configuration list for PBXNativeTarget "MGObjectMapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684DBDEC11EFDBF9FBDF5112 /* Debug */,
+				684DB816BA32F55F34CACAC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 684DB0BDFD138E61C0954029 /* Project object */;
+}
