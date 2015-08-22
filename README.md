@@ -43,8 +43,8 @@ default value
 }
 ```
 
-transform value
-  related objc or objects
+transform value  
+related objc or objects
 ```objc
 + (NSDictionary *)transformersByPropertyKey
 {
