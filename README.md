@@ -4,7 +4,7 @@ Objective-C JSON, Dictionary Mapping Library.
 Install
 ```
 platform :ios, '6.0'
-pod "MGObjectMapper", "~> 1.0.1"
+pod "MGObjectMapper", "~> 1.0.3"
 ```
 
 Usage
@@ -76,5 +76,19 @@ setter value
 {
     self.selectorName = [((NSString *)value) stringByAppendingString:@"Selector"];
     self.reSelectorName = self.selectorName;
+}
+```
+
+null object skip
+```objc
++ (NSDictionary *)nullObjectSkipsByPropertyKey
+{
+    return @{
+            @"name": @(YES),
+            @"memo": @(NO)
+    };
+    
+    // all skip
+    return [MGObjectMapper nullObjectAllSkips];
 }
 ```
