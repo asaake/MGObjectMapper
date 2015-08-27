@@ -78,3 +78,17 @@ setter value
     self.reSelectorName = self.selectorName;
 }
 ```
+
+null object skip
+```objc
++ (NSDictionary *)nullObjectSkipsByPropertyKey
+{
+    return @{
+            @"name": @(YES),
+            @"memo": @(NO)
+    };
+    
+    // all skip
+    return [MGObjectMapper nullObjectAllSkips];
+}
+```
