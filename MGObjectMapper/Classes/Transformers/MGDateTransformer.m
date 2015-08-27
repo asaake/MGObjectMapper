@@ -22,14 +22,25 @@
 
 - (instancetype)init
 {
-    return [self initWithDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZZ" locale:nil];
+    return [self initWithDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZZ" timeZone:nil locale:nil];
 }
 
 - (instancetype)initWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale
 {
+    return [self initWithDateFormat:dateFormat timeZone:nil locale:locale];
+}
+
+- (instancetype)initWithDateFormat:(NSString *)dateFormat timeZone:(NSTimeZone *)timeZone
+{
+    return [self initWithDateFormat:dateFormat timeZone:timeZone locale:nil];
+}
+
+- (instancetype)initWithDateFormat:(NSString *)dateFormat timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale
+{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = dateFormat;
-    dateFormatter.locale = locale;
+    if (timeZone) dateFormatter.timeZone = timeZone;
+    if (locale) dateFormatter.locale = locale;
     return [self initWithDateFormatter:dateFormatter];
 }
 

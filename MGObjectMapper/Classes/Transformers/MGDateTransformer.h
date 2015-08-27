@@ -11,6 +11,8 @@
 @property (nonatomic, readonly) NSDateFormatter *dateFormatter;
 
 - (instancetype)initWithDateFormat:(NSString *)dateFormat locale:(NSLocale *)locale;
+- (instancetype)initWithDateFormat:(NSString *)dateFormat timeZone:(NSTimeZone *)timeZone;
+- (instancetype)initWithDateFormat:(NSString *)dateFormat timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale;
 - (instancetype)initWithDateFormatter:(NSDateFormatter *)dateFormatter;
 
 @end
