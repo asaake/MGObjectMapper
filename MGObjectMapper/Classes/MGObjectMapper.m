@@ -9,7 +9,19 @@
 #import "MGObjectMapper.h"
 #import <objc/message.h>
 
+static NSDictionary *kNullObjectAllSkips;
+
 @implementation MGObjectMapper
+
++ (void)initialize
+{
+    kNullObjectAllSkips = [[NSMutableDictionary alloc] init];
+}
+
++ (NSDictionary *)nullObjectAllSkips
+{
+    return kNullObjectAllSkips;
+}
 
 + (id)modelOfClass:(Class<MGObjectMapperResource>)modelClass fromDictionary:(NSDictionary *)data
 {
@@ -49,19 +61,29 @@
     }
 
     // 値設定セレクターを取得
-    NSDictionary *mappings = [modelClass keyPathsByPropertyKey];
     NSDictionary *importSelectors = @{};
     if ([((id) modelClass) respondsToSelector:@selector(importSelectorsByPropertyKey)]) {
         importSelectors = [modelClass importSelectorsByPropertyKey];
     }
 
+    // Nullオブジェクトを飛ばすかどうかを取得する
+    NSDictionary *nullObjectSkips = @{};
+    if ([((id) modelClass) respondsToSelector:@selector(nullObjectSkipsByPropertyKey)]) {
+        nullObjectSkips = [modelClass nullObjectSkipsByPropertyKey];
+    }
+
     // プロパティへマッピング
+    NSDictionary *mappings = [modelClass keyPathsByPropertyKey];
     for (NSString *propertyKey in mappings) {
 
         // JSONデータの取り出し
         NSString *jsonKey = mappings[propertyKey];
         NSObject *jsonValue = data[jsonKey];
         if (jsonValue == nil) continue;
+
+        // Nullオブジェクトを飛ばすかどうか
+        if (nullObjectSkips == [self nullObjectAllSkips]
+                || (nullObjectSkips[propertyKey] && [nullObjectSkips[propertyKey] boolValue])) continue;
 
         // 値を変換する
         NSValueTransformer *transformer = transformers[propertyKey];

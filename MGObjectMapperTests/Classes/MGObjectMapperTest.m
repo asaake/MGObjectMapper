@@ -72,6 +72,57 @@
 
 @end
 
+@interface MGMockNullSkipObject : NSObject<MGObjectMapperResource>
+@property (nonatomic) NSString *id;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *memo;
+@end
+
+@implementation MGMockNullSkipObject
+
++ (NSDictionary *)keyPathsByPropertyKey
+{
+    return @{
+            @"id": @"id",
+            @"name": @"name",
+            @"memo": @"memo"
+    };
+}
+
++ (NSDictionary *)nullObjectSkipsByPropertyKey
+{
+    return @{
+            @"name": @(YES),
+            @"memo": @(NO)
+    };
+}
+
+@end
+
+@interface MGMockAllNullSkipObject : NSObject<MGObjectMapperResource>
+@property (nonatomic) NSString *id;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *memo;
+@end
+
+@implementation MGMockAllNullSkipObject
+
++ (NSDictionary *)keyPathsByPropertyKey
+{
+    return @{
+            @"id": @"id",
+            @"name": @"name",
+            @"memo": @"memo"
+    };
+}
+
++ (NSDictionary *)nullObjectSkipsByPropertyKey
+{
+    return [MGObjectMapper nullObjectAllSkips];
+}
+
+@end
+
 SPEC_BEGIN(MGObjectMapperSpec)
 
     describe(@"MGObjectMapper", ^{
@@ -203,6 +254,42 @@ SPEC_BEGIN(MGObjectMapperSpec)
             [[[[object.relatedArrayObject[1] relatedArrayObject][0] name] should] equal:@"jiro2_saburo1"];
             [[[[object.relatedArrayObject[1] relatedArrayObject][1] name] should] equal:@"jiro2_saburo2"];
 
+        });
+
+        it(@"Nullオブジェクトをスキップできることを確認する", ^{
+
+            NSDictionary *data = @{
+                    @"id": [NSNull null],
+                    @"name": [NSNull null],
+                    @"memo": [NSNull null]
+            };
+            MGMockNullSkipObject *object = [[MGMockNullSkipObject alloc] init];
+            object.id = @"1";
+            object.name = @"taro";
+            object.memo = @"memo";
+            [MGObjectMapper modelOfObject:object fromDictionary:data];
+
+            [[object.id should] equal:[NSNull null]];
+            [[object.name should] equal:@"taro"];
+            [[object.memo should] equal:[NSNull null]];
+        });
+
+        it(@"Nullオブジェクトを全てスキップできることを確認する", ^{
+
+            NSDictionary *data = @{
+                    @"id": [NSNull null],
+                    @"name": [NSNull null],
+                    @"memo": [NSNull null]
+            };
+            MGMockAllNullSkipObject *object = [[MGMockAllNullSkipObject alloc] init];
+            object.id = @"1";
+            object.name = @"taro";
+            object.memo = @"memo";
+            [MGObjectMapper modelOfObject:object fromDictionary:data];
+
+            [[object.id should] equal:@"1"];
+            [[object.name should] equal:@"taro"];
+            [[object.memo should] equal:@"memo"];
         });
 
     });

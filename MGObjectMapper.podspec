@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MGObjectMapper"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Objective-C JSON, Dictionary Mapping Library."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/asaake/MGObjectMapper.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/asaake/MGObjectMapper.git", :tag => "1.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

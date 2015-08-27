@@ -14,5 +14,6 @@
 + (NSDictionary *)defaultPropertyValues;
 + (NSDictionary *)transformersByPropertyKey;
 + (NSDictionary *)importSelectorsByPropertyKey;
++ (NSDictionary *)nullObjectSkipsByPropertyKey;
 
 @end

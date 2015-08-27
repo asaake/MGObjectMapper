@@ -10,6 +10,7 @@
 #import "MGObjectMapperResource.h"
 
 @interface MGObjectMapper : NSObject
++ (NSDictionary *)nullObjectAllSkips;
 + (id)modelOfClass:(Class<MGObjectMapperResource>)modelClass fromDictionary:(NSDictionary *)data;
 + (NSArray *)modelOfClass:(Class<MGObjectMapperResource>)modelClass fromArray:(NSArray *)arrayData;
 + (id)modelOfObject:(NSObject <MGObjectMapperResource> *)modelObject fromDictionary:(NSDictionary *)data;
