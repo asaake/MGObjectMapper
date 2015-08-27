@@ -4,7 +4,7 @@ Objective-C JSON, Dictionary Mapping Library.
 Install
 ```
 platform :ios, '6.0'
-pod "MGObjectMapper", "~> 1.0.1"
+pod "MGObjectMapper", "~> 1.0.3"
 ```
 
 Usage
