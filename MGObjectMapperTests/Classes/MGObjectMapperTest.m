@@ -277,12 +277,11 @@ SPEC_BEGIN(MGObjectMapperSpec)
         it(@"Nullオブジェクトを全てスキップできることを確認する", ^{
 
             NSDictionary *data = @{
-                    @"id": [NSNull null],
+                    @"id": @"1",
                     @"name": [NSNull null],
                     @"memo": [NSNull null]
             };
             MGMockAllNullSkipObject *object = [[MGMockAllNullSkipObject alloc] init];
-            object.id = @"1";
             object.name = @"taro";
             object.memo = @"memo";
             [MGObjectMapper modelOfObject:object fromDictionary:data];

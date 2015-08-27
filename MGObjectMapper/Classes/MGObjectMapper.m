@@ -82,8 +82,9 @@ static NSDictionary *kNullObjectAllSkips;
         if (jsonValue == nil) continue;
 
         // Nullオブジェクトを飛ばすかどうか
-        if (nullObjectSkips == [self nullObjectAllSkips]
-                || (nullObjectSkips[propertyKey] && [nullObjectSkips[propertyKey] boolValue])) continue;
+        if (jsonValue == [NSNull null]
+            && (nullObjectSkips == [self nullObjectAllSkips]
+                || (nullObjectSkips[propertyKey] && [nullObjectSkips[propertyKey] boolValue]))) continue;
 
         // 値を変換する
         NSValueTransformer *transformer = transformers[propertyKey];
