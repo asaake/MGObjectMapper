@@ -38,6 +38,8 @@ MGMockObject *object = [MGObjectMapper modelOfClass:MGMockObject.class fromDicti
 
 ## Options
 default value
+set the default value at the time of initialization.
+if NSNull object had entered, it converted to the default value.
 
 ```objc
 + (NSDictionary *)defaultPropertyValues
