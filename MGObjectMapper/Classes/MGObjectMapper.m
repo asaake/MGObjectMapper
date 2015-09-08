@@ -54,6 +54,12 @@ static NSDictionary *kNullObjectAllSkips;
     // オブジェクトからモデルクラスを取り出す
     Class<MGObjectMapperResource> modelClass = [modelObject class];
 
+    // デフォルト値を取得
+    NSDictionary *defaultPropertyValues;
+    if ([((id)modelClass) respondsToSelector:@selector(defaultPropertyValues)]) {
+        defaultPropertyValues = [modelClass defaultPropertyValues];
+    }
+
     // 値変換オブジェクトを取得
     NSDictionary *transformers = @{};
     if ([((id) modelClass) respondsToSelector:@selector(transformersByPropertyKey)]) {
@@ -85,6 +91,13 @@ static NSDictionary *kNullObjectAllSkips;
         if (jsonValue == [NSNull null]
             && (nullObjectSkips == [self nullObjectAllSkips]
                 || (nullObjectSkips[propertyKey] && [nullObjectSkips[propertyKey] boolValue]))) continue;
+
+        // Nullオブジェクトでデフォルト値がある場合はそれを設定する
+        id defaultValue = defaultPropertyValues[propertyKey];
+        if (jsonValue == [NSNull null] && defaultValue) {
+            [modelObject setValue:defaultValue forKey:propertyKey];
+            continue;
+        }
 
         // 値を変換する
         NSValueTransformer *transformer = transformers[propertyKey];

@@ -89,6 +89,13 @@
     };
 }
 
++ (NSDictionary *)defaultPropertyValues
+{
+    return @{
+            @"memo": @"defaultMemo"
+    };
+}
+
 + (NSDictionary *)nullObjectSkipsByPropertyKey
 {
     return @{
@@ -260,18 +267,27 @@ SPEC_BEGIN(MGObjectMapperSpec)
 
             NSDictionary *data = @{
                     @"id": [NSNull null],
-                    @"name": [NSNull null],
-                    @"memo": [NSNull null]
+                    @"name": [NSNull null]
             };
             MGMockNullSkipObject *object = [[MGMockNullSkipObject alloc] init];
             object.id = @"1";
             object.name = @"taro";
-            object.memo = @"memo";
             [MGObjectMapper modelOfObject:object fromDictionary:data];
 
             [[object.id should] equal:[NSNull null]];
             [[object.name should] equal:@"taro"];
-            [[object.memo should] equal:[NSNull null]];
+        });
+
+        it(@"デフォルトを指定しているプロパティにNullオブジェクトが指定されている場合は、デフォルトを設定することを確認する", ^{
+
+            NSDictionary *data = @{
+                    @"memo": [NSNull null]
+            };
+            MGMockNullSkipObject *object = [[MGMockNullSkipObject alloc] init];
+            object.memo = @"memo";
+            [MGObjectMapper modelOfObject:object fromDictionary:data];
+
+            [[object.memo should] equal:@"defaultMemo"];
         });
 
         it(@"Nullオブジェクトを全てスキップできることを確認する", ^{
